@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.android.mb24an">
+
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".activities.About"></activity>
+        <activity android:name=".activities.HomeTabActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.MainActivity" />
+        <activity
+            android:name=".activities.AddTaskActivity"
+            android:label="@string/addTask_string"
+            android:parentActivityName=".activities.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.mb24an.activities.MainActivity" />
+        </activity>
+        <activity
+            android:name=".activities.UpdateTaskActivity"
+            android:label="@string/updateTask_string"
+            android:parentActivityName=".activities.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.mb24an.activities.MainActivity" />
+        </activity>
+        <activity android:name=".activities.TotalActivity" />
+        <activity android:name=".activities.GraphActivity" />
+        <activity android:name=".activities.TargetTimeSettingActivity" />
+        <activity android:name=".room.CreateContactActivity" />
+        <activity android:name=".room.UpdateContactActivity" />
+        <activity android:name=".room.MainActivity2" />
+
+        <service android:name=".notification.MyFirebaseInstanceIdService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".notification.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity android:name=".activities.ProjectsList" />
+
+        <receiver android:name=".notification.Notification_reciever" />
+
+        <activity android:name=".activities.SubjectsList" />
+    </application>
+
+</manifest>

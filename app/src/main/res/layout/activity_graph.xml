@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context="com.example.android.mb24an.activities.GraphActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/graph_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#84C05A"
+        android:elevation="4dp"
+        app:contentInsetEnd="0dp"
+        app:contentInsetStart="0dp">
+
+        <com.example.android.mb24an.activities.SegmentedRadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dip"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal"
+            android:paddingLeft="60dp"
+            android:paddingRight="60dp"
+            android:id="@+id/day_button"
+            android:checkedButton="@+id/today_button"
+
+            >
+
+            <RadioButton
+                android:id="@id/today_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:button="@null"
+                android:textColor="@color/radio_colors"
+                android:text="Days"
+                android:textSize="20sp"
+                android:layout_weight="1"
+
+                />
+
+            <RadioButton
+                android:id="@+id/week_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:button="@null"
+                android:textColor="@color/radio_colors"
+                android:text="Weeks"
+                android:textSize="20sp"
+                android:layout_weight="1"/>
+
+            <RadioButton
+                android:id="@+id/month_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:button="@null"
+                android:textColor="@color/radio_colors"
+                android:text="Months"
+                android:textSize="20sp"
+                android:layout_weight="1"/>
+
+        </com.example.android.mb24an.activities.SegmentedRadioGroup>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/local_date"
+        android:gravity="center"
+        android:text="Day"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        />
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/bar_chart"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_gravity="center" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="25dp"
+        android:gravity="top"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:gravity="center"
+            android:text="&lt;"
+            android:textColor="@color/radio_colors"
+            android:textSize="30sp"
+            android:onClick="onPreviousButton"
+            android:background="#A8D688"/>
+
+        <TextVie
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:visibility="invisible" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:gravity="center"
+            android:text="&gt;"
+            android:textColor="@color/radio_colors"
+            android:textSize="30sp"
+            android:onClick="onNextButton"
+            android:background="#FFA8D688"/>
+
+    </LinearLayout>
+
+</LinearLayout>

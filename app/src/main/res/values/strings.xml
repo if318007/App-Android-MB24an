@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">Mb24an</string>
+
+    <string name="action_option">Menu</string>
+    <string name="action_today">Today</string>
+    <string name="action_week">Week</string>
+    <string name="action_month">Month</string>
+
+    <!-- string for add task -->
+    <string name="addTask_string">Add Task</string>
+    <string name="detail_string">Detail</string>
+    <string name="date_string">Date</string>
+    <string name="subject_string">Subject</string>
+    <string name="project_string">Project</string>
+    <string name="time_string">Time</string>
+    <string name="start_string">Start</string>
+    <string name="end_string">End</string>
+    <string name="add_string">Add</string>
+
+    <!-- string for update task -->
+    <string name="updateTask_string">Update Task</string>
+
+    <!--string for target time activity-->
+    <string name="set_button">Set</string>
+
+    <!--string for ProjectsList activity-->
+    <string name="projects_string">Projects</string>
+    <string name="greater_than_string">  &gt;  </string>
+    <string name="projects_toast_string">Project Toast</string>
+    <string name="project_excel_file_name">myExcel.xls</string>
+
+    <!--string for ProjectsList activity-->
+    <string name="subjects_string">Subjects</string>
+    <string name="subjects_toast_string">Subject Toast</string>
+    <string name="subjectt_excel_file_name">myExcel.xls</string>
+
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="save">Save</string>
+    <string name="update">Update</string>
+    <string name="delete">Delete</string>
+    <string name="created_on">Created On</string>
+
+</resources>
